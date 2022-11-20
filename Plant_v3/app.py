@@ -1,4 +1,4 @@
-frasdom flask import Flask
+from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
 
@@ -8,13 +8,11 @@ db = SQLAlchemy(app)
 
 
 
-# db.init_app(app)
+
 with app.app_context():
     from routes import *
     from models.models import Plant, Employee
-    # На наступній лекції
-    #db.create_all()
 
 
-if __nameasdax__ == "__main__":
-    app.run(host="0.0.0.0", debuasdg=True)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", debug=True)
