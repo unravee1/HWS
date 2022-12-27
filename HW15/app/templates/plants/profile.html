@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+  <h1>Our plants</h1>
+  <hr>
+  <p>Here are our plants!</p>
+    {% for plant in all_plants %}
+        <div class="alert alert-warning mt-2">
+            {{ plant.title }}<br>
+            {{ plant.location }}<br>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
