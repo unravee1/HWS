@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container py-4">
+        <h1>Plants</h1>
+        <hr>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('plant.register') }}">Add plant</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('plant.profile_all') }}">Information about plants</a>
+            </li>
+        </ul>
+    </div>
+{% endblock %}

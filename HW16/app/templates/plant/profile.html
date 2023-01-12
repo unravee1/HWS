@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for plant in plants %}
+        <div class="container py-4" >
+            <div class="card w-25 mx-auto">
+                <div class="card-header">
+                    <img src="https://cdn-icons-png.flaticon.com/512/4185/4185389.png" class="card-img-top" alt="">
+                    <h4 class="card-title">{{ plant.title }}</h4>
+                </div>
+                <div class="card-body">
+                    <form class="form" role="form" action="{{ url_for('plant.profile_all') }}" method="post">
+                        <div class="card w-100 mx-auto">
+                            <div class="card-header">
+                                <h4 class="card-title">id: {{ plant.id }}</h4>
+                            </div>
+                            <div class="card-header">
+                                <h4 class="card-title">Location: {{ plant.location }}</h4>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
